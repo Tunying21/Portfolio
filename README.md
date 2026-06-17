@@ -70,8 +70,7 @@ I'm an Information Technology student from the Philippines with experience in ba
 ## 📫 Connect With Me
 
 - 📧 Email: Edcagatan00@gmail.com
-- 💼 LinkedIn: Add your LinkedIn profile
-- 🌐 Portfolio: Add your portfolio website
+- 💼 LinkedIn: https://www.linkedin.com/public-profile/settings/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BjWlJsBc%2FShWN%2BNH7AHv2ig%3D%3D
 
 ---
 

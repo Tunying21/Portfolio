@@ -51,9 +51,6 @@
               alt="Portrait"
               class="hero-photo"
             />
-            <p class="hero-photo-caption d-none d-lg-block">
-              this is not my photo, but I dearly hope to get one just like this
-            </p>
           </div>
         </div>
       </div>
@@ -230,56 +227,6 @@
         <p class="portfolio-footer-text">And many more to come!</p>
       </div>
     </section>
-
-    <!-- Contact -->
-    <section id="contact" class="contact-section text-center">
-      <div class="container">
-        <div class="section-title-box">
-          <h2 class="section-title">Contact</h2>
-        </div>
-        <p class="contact-intro">
-          Nulla in velit a metus rhoncus tempus. Nulla congue nulla vel sem
-          varius finibus. Sed ornare sit amet lorem sed viverra. In vel urna
-          quis libero viverra facilisis ut ac est.
-        </p>
-
-        <form class="contact-form text-start" @submit.prevent="handleSubmit">
-          <div class="form-field">
-            <input
-              v-model="form.name"
-              type="text"
-              placeholder="Ed Rascoe Cagatan"
-              aria-label="Name"
-            />
-          </div>
-          <div class="form-field">
-            <input
-              v-model="form.email"
-              type="email"
-              placeholder="edcagatan00@gmail.com"
-              aria-label="Email"
-            />
-          </div>
-          <div class="form-field">
-            <input
-              v-model="form.phone"
-              type="tel"
-              placeholder="09855695788"
-              aria-label="Phone"
-            />
-          </div>
-          <div class="form-field message-field">
-            <textarea
-              v-model="form.message"
-              placeholder="YOUR MESSAGE*"
-              aria-label="Message"
-            ></textarea>
-          </div>
-          <button type="submit" class="btn-submit">SUBMIT</button>
-        </form>
-      </div>
-    </section>
-
     <!-- Footer -->
     <footer class="footer-section">
       <a href="#hero" class="back-to-top"> ↑ BACK TO TOP </a>

@@ -1,0 +1,736 @@
+:root {
+  --gray-bg: #d7d7d7;
+  --dark-bg: #1a1a1a;
+  --dark-section: #1d1d1d;
+  --text-muted: #909090;
+  --text-gray: #8b8b8b;
+  --filter-inactive: #7c7c7c;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #000;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6,
+.section-title,
+.nav-link-custom,
+.btn-outline-custom,
+.filter-tab,
+.service-title,
+.skill-label {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Navbar */
+.navbar-scrolled {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1050;
+  background: rgba(0, 0, 0, 0.95);
+  height: 66px;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
+}
+
+.navbar-scrolled.show {
+  transform: translateY(0);
+}
+
+.navbar-scrolled .nav-link-custom {
+  color: #fff !important;
+  font-size: 17px;
+  font-weight: 700;
+  padding: 10px 24px;
+  text-decoration: none;
+}
+
+.navbar-scrolled .nav-link-custom:hover {
+  opacity: 0.8;
+}
+
+.navbar-scrolled .btn-contact {
+  background: #fff;
+  color: #000;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 10px 24px;
+  border: 4px solid #fff;
+  text-decoration: none;
+}
+
+/* Hero */
+.hero-section {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background: var(--gray-bg);
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 55%;
+  height: 100%;
+  background: #000;
+  clip-path: polygon(35% 0, 100% 0, 100% 100%, 0 100%);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 120px 0 80px;
+}
+
+.hero-nav {
+  position: absolute;
+  top: 65px;
+  right: 0;
+  z-index: 10;
+}
+
+.hero-nav .nav-link-custom {
+  color: #fff;
+  font-size: 17px;
+  font-weight: 700;
+  padding: 10px 24px;
+  text-decoration: none;
+}
+
+.hero-nav .nav-link-custom:hover {
+  opacity: 0.85;
+}
+
+.hero-nav .btn-contact {
+  background: #fff;
+  color: #000;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 10px 24px;
+  border: 4px solid #fff;
+  text-decoration: none;
+}
+
+.hero-logo {
+  position: absolute;
+  top: 72px;
+  left: 0;
+  width: 60px;
+  height: 50px;
+  z-index: 10;
+}
+
+.hero-greeting {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  margin-bottom: 0.5rem;
+}
+
+.hero-name {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: clamp(2.5rem, 6vw, 80px);
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+}
+
+.hero-title {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  font-size: 25px;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+
+.hero-photo-wrap {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-photo {
+  max-height: 650px;
+  width: auto;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.hero-photo-caption {
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  color: #000;
+  max-width: 140px;
+  text-align: justify;
+  margin-top: 1rem;
+}
+
+.social-btn {
+  width: 61px;
+  height: 56px;
+  background: #c4c4c4;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+  text-decoration: none;
+}
+
+.social-btn img {
+  width: 34px;
+  height: 34px;
+}
+
+/* Section title box */
+.section-title-box {
+  display: inline-block;
+  border: 8px solid #000;
+  padding: 16px 48px;
+  margin-bottom: 2rem;
+}
+
+.section-title {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 10.66px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.section-title-sm {
+  letter-spacing: 5.56px;
+}
+
+/* Summary / ITberries */
+.summary-section {
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.summary-dark {
+  background: var(--dark-section);
+  color: #fff;
+  padding: 49px 0 80px;
+  position: relative;
+}
+
+.summary-title {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 5.56px;
+  margin-bottom: 1.5rem;
+}
+
+.summary-text {
+  font-size: 15px;
+  line-height: 1.387;
+  max-width: 1148px;
+}
+
+.it-logo {
+  position: absolute;
+  right: -40px;
+  top: -80px;
+  width: 280px;
+  height: 280px;
+  border: 12px solid #000;
+  transform: rotate(24deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+}
+
+.it-logo span {
+  font-size: 120px;
+  font-weight: 700;
+  color: #000;
+  transform: rotate(-24deg);
+  font-family: "Montserrat", sans-serif;
+}
+
+/* About */
+.about-section {
+  background: radial-gradient(ellipse at center, rgba(26, 21, 21, 0) 0%, rgba(1, 1, 1, 0.16) 100%), #fff;
+  padding: 80px 0;
+}
+
+.about-text {
+  font-size: 15px;
+  font-weight: 300;
+  max-width: 763px;
+  margin: 0 auto 2rem;
+  line-height: 1.6;
+}
+
+.btn-outline-custom {
+  background: none;
+  border: none;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 8px 20px;
+  position: relative;
+  color: #000;
+}
+
+.btn-outline-custom::before,
+.btn-outline-custom::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: #000;
+}
+
+.btn-outline-custom::before {
+  left: 0;
+}
+
+.btn-outline-custom::after {
+  right: 0;
+}
+
+.separator {
+  width: 170px;
+  height: 12px;
+  background: #000;
+  margin: 3rem auto;
+  clip-path: polygon(0 50%, 15% 0, 30% 50%, 45% 0, 60% 50%, 75% 0, 90% 50%, 100% 0, 100% 100%, 0 100%);
+}
+
+.service-card {
+  padding: 1rem;
+}
+
+.service-title {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  margin-bottom: 1rem;
+}
+
+.service-text {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.service-icon {
+  width: 64px;
+  height: 64px;
+  opacity: 0.15;
+  margin-bottom: 0.5rem;
+}
+
+/* Skills */
+.skills-section {
+  padding: 4rem 0 2rem;
+}
+
+.skills-subtitle {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 5.56px;
+  margin-bottom: 2rem;
+}
+
+.skill-item {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.skill-icon {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 0.75rem;
+}
+
+.skill-label {
+  font-size: 18px;
+  letter-spacing: 3.25px;
+  text-transform: uppercase;
+}
+
+/* Portfolio */
+.portfolio-section {
+  background: var(--dark-bg);
+}
+
+.portfolio-header {
+  position: relative;
+  height: 321px;
+  overflow: hidden;
+}
+
+.portfolio-header img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.portfolio-header-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.32);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.portfolio-header .section-title-box {
+  border-color: #000;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.filter-bar {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  padding: 1.5rem 0;
+  position: relative;
+}
+
+.filter-tab {
+  background: none;
+  border: none;
+  color: var(--filter-inactive);
+  font-size: 14px;
+  font-weight: 600;
+  padding: 12px 40px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.filter-tab.active {
+  color: #fffbfb;
+}
+
+.filter-underline {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 587px;
+  max-width: 90%;
+  height: 2px;
+  background: #444;
+}
+
+.filter-underline-active {
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  background: #fff;
+  transition: left 0.3s, width 0.3s;
+}
+
+.project-grid .col-12,
+.project-grid .col-md-4 {
+  padding: 0;
+}
+
+.project-item {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+}
+
+.project-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s;
+  padding: 2rem;
+  text-align: center;
+}
+
+.project-item:hover .project-overlay,
+.project-item.featured .project-overlay {
+  opacity: 1;
+}
+
+.project-tag {
+  font-size: 10px;
+  font-style: italic;
+  letter-spacing: 0.95px;
+  margin-bottom: 0.5rem;
+}
+
+.project-name {
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: 5px;
+  margin-bottom: 0.5rem;
+}
+
+.project-desc {
+  font-size: 10px;
+  margin-bottom: 1rem;
+}
+
+.project-links {
+  display: flex;
+  gap: 0;
+  align-items: center;
+}
+
+.project-link {
+  color: #fffbfb;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.14px;
+  padding: 0 20px;
+  text-decoration: none;
+  position: relative;
+}
+
+.project-link:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2px;
+  height: 27px;
+  background: #fff;
+}
+
+.portfolio-footer-text {
+  color: #fffbfb;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 3rem 0;
+  text-align: center;
+}
+
+/* Contact */
+.contact-section {
+  background: radial-gradient(ellipse at center, rgba(26, 21, 21, 0) 0%, rgba(0, 0, 0, 0.16) 100%), #fff;
+  padding: 80px 0 100px;
+}
+
+.contact-intro {
+  font-size: 15px;
+  max-width: 763px;
+  margin: 0 auto 3rem;
+  line-height: 1.387;
+  text-align: center;
+}
+
+.contact-form {
+  max-width: 610px;
+  margin: 0 auto;
+}
+
+.form-field {
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+
+.form-field input,
+.form-field textarea {
+  width: 100%;
+  border: none;
+  border-bottom: 5px solid #000;
+  background: transparent;
+  padding: 12px 0 12px 24px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-gray);
+  letter-spacing: 0.56px;
+  outline: none;
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color: var(--text-gray);
+  opacity: 1;
+}
+
+.form-field::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 5px;
+  height: 48px;
+  background: #000;
+}
+
+.form-field.message-field::before {
+  height: 100%;
+  min-height: 184px;
+}
+
+.form-field textarea {
+  min-height: 184px;
+  resize: vertical;
+  padding-top: 16px;
+}
+
+.btn-submit {
+  background: none;
+  border: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+  padding: 12px 40px;
+  position: relative;
+  color: #000;
+  display: block;
+  margin: 2rem auto 0;
+}
+
+.btn-submit::before,
+.btn-submit::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: #000;
+}
+
+.btn-submit::before {
+  left: 0;
+}
+
+.btn-submit::after {
+  right: 0;
+}
+
+/* Footer */
+.footer-section {
+  background: var(--dark-bg);
+  color: #fff;
+  padding: 60px 0 40px;
+  text-align: center;
+}
+
+.back-to-top {
+  color: #fff;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 2rem;
+}
+
+.back-to-top:hover {
+  color: #ccc;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  margin-bottom: 2rem;
+}
+
+.footer-social a {
+  color: #fff;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.footer-social a:hover {
+  opacity: 0.7;
+}
+
+.footer-copy {
+  font-size: 14px;
+  color: #aaa;
+}
+
+@media (max-width: 991.98px) {
+  .hero-section::before {
+    width: 100%;
+    clip-path: polygon(0 55%, 100% 35%, 100% 100%, 0 100%);
+    height: 55%;
+    top: auto;
+    bottom: 0;
+  }
+
+  .hero-content {
+    padding-top: 100px;
+    text-align: center;
+  }
+
+  .hero-nav {
+    display: none;
+  }
+
+  .hero-logo {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .hero-photo-wrap {
+    margin-top: 2rem;
+  }
+
+  .it-logo {
+    display: none;
+  }
+
+  .section-title {
+    font-size: 22px;
+    letter-spacing: 6px;
+  }
+
+  .section-title-box {
+    padding: 12px 24px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .project-item {
+    height: 280px;
+  }
+
+  .filter-tab {
+    padding: 12px 20px;
+    font-size: 12px;
+  }
+}

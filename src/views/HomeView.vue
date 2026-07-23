@@ -37,10 +37,18 @@
               >
                 <img src="/assets/icon-mail.svg" alt="Email" />
               </a>
-              <a href="#" class="social-btn" aria-label="GitHub">
+              <a
+                href="https://github.com/Tunying21"
+                class="social-btn"
+                aria-label="GitHub"
+              >
                 <img src="/assets/icon-github.svg" alt="GitHub" />
               </a>
-              <a href="#" class="social-btn" aria-label="LinkedIn">
+              <a
+                href="https://www.linkedin.com/in/ed-rascoe-cagatan-317859192"
+                class="social-btn"
+                aria-label="LinkedIn"
+              >
                 <img src="/assets/icon-linkedin.svg" alt="LinkedIn" />
               </a>
             </div>
